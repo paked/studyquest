@@ -1,7 +1,12 @@
 console.log("Hello World")
 
-var c = document.getElementById("canvas")
-var ctx = c.getContext("2d")
+questions = [{question: "Why is the sky blue", answer: "1"}, {question: "Who was xxx", answer: "2"}, {question:"Why eat cheese", answer:"3"}]
 
-ctx.font = "33px Helvetica"
-ctx.fillText("Hello World", 10, 90)
+/* HELPER FUNCTIONS */
+function rand(min, max) {
+  var offset = min;
+  var range = (max - min) + 1;
+
+  var randomNumber = Math.floor( Math.random() * range) + offset;
+  return randomNumber;
+}
